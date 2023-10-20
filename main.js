@@ -1,5 +1,8 @@
 // Functions-Extra-Material
-// Mubashir created a function that takes two numbers a and b and an operator o. His function should return the result of the corresponding mathematical function on both numbers. If the operator is not one of the specified characters +, -, /, *, or if there is a division by zero, the function should return null. Help him by fixing the code in the code tab to pass this challenge.
+// Mubashir created a function that takes two numbers a and b and an operator o. 
+//His function should return the result of the corresponding mathematical function on both numbers. 
+//If the operator is not one of the specified characters +, -, /, *, or if there is a division by zero, 
+//the function should return null. Help him by fixing the code in the code tab to pass this challenge.
 
 // Look at the examples below to get an idea of what the function should do:
 
@@ -17,10 +20,38 @@
 
 // basicCalculator(1, 'x', 0) ➞ null
 // 'x' is not an operator
+function  basicCalculator (n1,o,n2) {
+    if(o === '+'){
+        return n1+n2
+    }
+    else if ( o === '-' ){
+        return n1-n2
+    }
+    else if (o === '*' ){
+        return n1*n2
+    }
+    else if (o==="/"){
+        if (n2!==0){
+            return n1/n2
+        }
+        return "null div (can't devide by 0)"
+        
+    }
+    
+    else 
+     {
+        return null
+    }
+}
 
 
 // Booleans-Extra
 // Write a function called isLeapYear that takes a year as input and returns true if the year is a leap year (i.e., it's divisible by 4, but not divisible by 100 unless it's also divisible by 400), and false otherwise.
+function isLeapYear(year){
+    if ((year/4)) {
+        
+    }
+}
 
 // Write a function called isValidPassword that takes a string as input and returns true if it meets the following criteria:
 // It has at least 8 characters
