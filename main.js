@@ -47,10 +47,13 @@ function  basicCalculator (n1,o,n2) {
 
 // Booleans-Extra
 // Write a function called isLeapYear that takes a year as input and returns true if the year is a leap year (i.e., it's divisible by 4, but not divisible by 100 unless it's also divisible by 400), and false otherwise.
-function isLeapYear(year){
-    if ((year/4)) {
-        
+function isLeapYear (year){
+    if ( year %4 === 0 && year %100!==0 || year %400 === 0       ){
+        return true 
     }
+
+        return false
+
 }
 
 // Write a function called isValidPassword that takes a string as input and returns true if it meets the following criteria:
@@ -58,7 +61,21 @@ function isLeapYear(year){
 // It contains at least one uppercase letter, one lowercase letter, and one number
 // It does not contain any spaces
 // The function should return false otherwise.
+// method 1 :
+function valid (string){
+    if (string.length >= 8 &&  string.charAt(0).toUpperCase() && string.toLowerCase() && /\d/.test(string) && (!(/\s/.test(string)))  ){
+        return true 
+}
+   return false
+}
+// method 2 :
+function valid (string){
+    if (string.length >= 8 &&  /[A-Z]/.test(string) && string.toLowerCase() && /\d/.test(string) && (!(/\s/.test(string)))  ){
+        return true 
+}
+   return false
+}
 
 // Write a function called hasUniqueCharacters that takes a string as input and returns true if all the characters in the string are unique (i.e., none of the characters repeat), and false otherwise.
-
+  
 // Write a function called isPrimeProduct that takes two positive integers as input and returns true if their product is a prime number, and false otherwise.
